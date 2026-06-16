@@ -1,5 +1,7 @@
 # tbls
 
+[![License](https://img.shields.io/badge/license-ISC-blue)](https://opensource.org/licenses/ISC)
+
 Pure OCaml library for rendering tabular data to plain text, Markdown, or HTML.
 
 Accepts typed column descriptors or raw string rows, infers integer and float
