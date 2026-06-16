@@ -1,0 +1,117 @@
+.Dd February 11, 2026
+.Dt TBLS 1
+.Os
+.Sh NAME
+.Nm tbls
+.Nd render tabular data
+.Sh SYNOPSIS
+.Nm
+.Op Fl \-format Ar format
+.Op Fl \-border Ar style
+.Op Fl \-delimiter Ar char
+.Op Fl \-no-header
+.Op Fl \-null Ar string
+.Op Ar file ...
+.Sh DESCRIPTION
+.Nm
+reads CSV or TSV data from
+.Ar file
+arguments or standard input and renders it as a table on standard output.
+Multiple file arguments are concatenated in order.
+All rows must have the same number of fields.
+.Pp
+By default, the first row is treated as a header row and rendered separately
+from the data rows.
+.Pp
+Text output applies ANSI color to header cells and border characters.
+Color is disabled when
+.Ev NO_COLOR
+is set to any value or
+.Ev TERM
+is set to
+.Dq dumb .
+.Sh OPTIONS
+.Bl -tag -width Ds
+.It Fl \-format Ar format
+Output format.
+One of
+.Cm text ,
+.Cm markdown ,
+or
+.Cm html .
+Default:
+.Cm text .
+.It Fl \-border Ar style
+Border style for text output.
+Ignored for
+.Cm markdown
+and
+.Cm html
+formats.
+One of
+.Cm ascii
+.Pq + corners, - horizontals, | verticals ,
+.Cm unicode
+.Pq box-drawing characters ,
+or
+.Cm none
+.Pq no border .
+Default:
+.Cm ascii .
+.It Fl \-delimiter Ar char
+Field delimiter character.
+Use
+.Cm tab
+or a literal tab for TSV input.
+Default:
+.Sq , .
+.It Fl \-no-header
+Treat the first row as data.
+By default the first row is a header row.
+.It Fl \-null Ar string
+Replacement string for empty cells.
+Default: empty string.
+.El
+.Sh EXIT STATUS
+.Bl -tag -width Ds -compact
+.It 0
+Success.
+.It 1
+Invalid arguments.
+.It 2
+Input parsing failure.
+.It 3
+File access failure.
+.It 4
+Rendering failure.
+.El
+.Sh EXAMPLES
+Render a CSV file:
+.Bd -literal -offset indent
+tbls data.csv
+.Ed
+.Pp
+Read from standard input:
+.Bd -literal -offset indent
+cat data.csv | tbls
+.Ed
+.Pp
+Render as Markdown:
+.Bd -literal -offset indent
+tbls --format markdown data.csv
+.Ed
+.Sh ENVIRONMENT
+.Bl -tag -width NO_COLOR
+.It Ev NO_COLOR
+Disables ANSI color output when set to any value.
+.It Ev TERM
+Disables ANSI color output when set to
+.Dq dumb .
+.El
+.Sh SEE ALSO
+.Xr tbls 3
+.Sh AUTHORS
+.An Sergiy Duras <sergiy@duras.org>
+.Sh BUGS
+Report issues:
+.Lk https://codeberg.org/duras/tbls/issues

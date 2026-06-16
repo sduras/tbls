@@ -1,0 +1,6 @@
+(executable
+ (name main)
+ (public_name tbls)
+ (modules main)
+ (libraries tbls)
+ (flags (:standard -warn-error +a)))

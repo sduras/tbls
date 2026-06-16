@@ -1,0 +1,5 @@
+(install
+ (package tbls)
+ (section man)
+ (enabled_if (= %{os_type} Unix))
+ (files (tbls.1 as man1/tbls.1)))

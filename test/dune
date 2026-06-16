@@ -1,0 +1,5 @@
+(test
+ (name test_tbls)
+ (modules test_tbls)
+ (libraries tbls alcotest)
+ (flags (:standard -warn-error +a)))

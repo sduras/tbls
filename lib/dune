@@ -1,0 +1,6 @@
+(library
+ (name tbls)
+ (public_name tbls)
+ (modules tbls types width encoder table infer layout analyze doc border
+          text markdown html render cli)
+ (flags (:standard -warn-error +a)))
