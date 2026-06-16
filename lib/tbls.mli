@@ -1,6 +1,3 @@
-(* SPDX-License-Identifier: ISC *)
-(* Copyright (c) 2026 Sergiy Duras *)
-
 (** tbls — pure OCaml library for rendering tabular data.
 
     Primary entry points: {!table} for typed input, {!table_of_rows} for
