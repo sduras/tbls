@@ -1,6 +1,4 @@
-# Changes
-
-## 0.4.0 (2026-06-16)
+### 0.4.0 (2026-06-16)
 
 - Extended East Asian Width table to cover emoji and symbols in the
   U+23xx–U+2Bxx range (✅ U+2705, ⏳ U+23F3, and ~50 related codepoints
