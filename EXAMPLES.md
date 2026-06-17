@@ -1,4 +1,4 @@
-```markdown
+```text
 
 ----------------------------------------
 | 1. List of lists -- raw string input |
