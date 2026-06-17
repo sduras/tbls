@@ -179,7 +179,7 @@ Pear     2.50  42 N/A
 
 For input containing emoji or CJK characters, text output alignment
 depends on the terminal's interpretation of character display width.
-Use markdown (`--format markdown`) or or html (`--format html`) for
+Use markdown (`--format markdown`) or html (`--format html`) for
 output that will be read outside a terminal.
 
 ----------------------------------------
