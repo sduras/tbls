@@ -177,6 +177,10 @@ Pear     2.50  42 N/A
 │ Deploy      │ Low         │ ⏳ Waiting     │
 └─────────────┴─────────────┴────────────────┘
 
+For input containing emoji or CJK characters, text output alignment
+depends on the terminal's interpretation of character display width.
+Use markdown (`--format markdown`) or or html (`--format html`) for
+output that will be read outside a terminal.
 
 ----------------------------------------
 | 11. Minimal API -- one function call |
