@@ -29,5 +29,5 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://codeberg.org/duras/tbls.git"
+dev-repo: "git+https://github.com/sduras/tbls.git"
 x-maintenance-intent: ["(latest)"]
