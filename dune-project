@@ -2,7 +2,7 @@
 (name tbls)
 (version 0.4.0)
 (generate_opam_files true)
-(source (github sduras/tbls))
+(source (codeberg duras/tbls))
 (homepage "https://codeberg.org/duras/tbls")
 (bug_reports "https://codeberg.org/duras/tbls/issues")
 (license ISC)
