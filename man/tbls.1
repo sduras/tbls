@@ -1,4 +1,4 @@
-.Dd June 16, 2026
+.Dd June 17, 2026
 .Dt TBLS 1
 .Os
 .Sh NAME
@@ -41,6 +41,15 @@ or
 .Cm html .
 Default:
 .Cm text .
+.Pp
+Text output alignment for cells containing emoji or wide characters
+depends on the terminal's rendering of character display widths.
+For output that will be read outside an EAW-aware terminal \(em in a
+text editor, a code block, or piped to another tool \(em use
+.Cm markdown
+or
+.Cm html ,
+where the renderer determines column widths independently.
 .It Fl \-border Ar style
 Border style for text output.
 Ignored for
@@ -109,9 +118,6 @@ Disables ANSI color output when set to
 .Dq dumb .
 .El
 .Sh SEE ALSO
-.Xr tbls 3
+.Lk https://codeberg.org/duras/tbls
 .Sh AUTHORS
 .An Sergiy Duras <sergiy@duras.org>
-.Sh BUGS
-Report issues:
-.Lk https://codeberg.org/duras/tbls/issues
